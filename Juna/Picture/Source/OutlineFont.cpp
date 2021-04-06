@@ -895,10 +895,12 @@ short BufferedOutlineFont::DrawOutlineFirstCharColor(I_Image& target, int x, int
 
 	int xoffset = image->xoffset;
 	int cellincx = image->CellIncX;
-	if (xoffset < 0)
+	const FontImage* fontimage = GetFontImage(c);
+	int font_xoffset = fontimage->xoffset;
+	if (font_xoffset < 0)
 	{
-		cellincx += -xoffset;
-		xoffset = 0;
+		cellincx += -font_xoffset;
+		xoffset += -font_xoffset;;
 	}
 
 	Rect rect;
@@ -916,10 +918,12 @@ short BufferedOutlineFont::DrawOutlineFirstCharAlpha(I_Image& target, int x, int
 
 	int xoffset = image->xoffset;
 	int cellincx = image->CellIncX;
-	if (xoffset < 0)
+	const FontImage* fontimage = GetFontImage(c);
+	int font_xoffset = fontimage->xoffset;
+	if (font_xoffset < 0)
 	{
-		cellincx += -xoffset;
-		xoffset = 0;
+		cellincx += -font_xoffset;
+		xoffset += -font_xoffset;;
 	}
 
 	Rect rect;
@@ -931,23 +935,26 @@ short BufferedOutlineFont::DrawOutlineFirstCharAlpha(I_Image& target, int x, int
 }
 short BufferedOutlineFont::DrawOutlineFirstCharPreMultipliedAlpha(I_Image& target, int x, int y, wchar_t c, Color color, const Rect* clip_rect) const
 {
-	const FontImage* image = GetOutlineImage(c);
-	if (!image)
+	const FontImage* outlineimage = GetOutlineImage(c);
+	if (!outlineimage)
 		return CellIncError;
 
-	int xoffset = image->xoffset;
-	int cellincx = image->CellIncX;
-	if (xoffset < 0)
+	int xoffset = outlineimage->xoffset;
+	int cellincx = outlineimage->CellIncX;
+
+	const FontImage* fontimage = GetFontImage(c);
+	int font_xoffset = fontimage->xoffset;
+	if (font_xoffset < 0)
 	{
-		cellincx += -xoffset;
-		xoffset = 0;
+		cellincx += -font_xoffset;
+		xoffset += -font_xoffset;;
 	}
 
 	Rect rect;
 	int dx, dy;
-	ClipSourceRect(rect, dx, dy, x + xoffset, y + image->yoffset, image->Image, clip_rect);
+	ClipSourceRect(rect, dx, dy, x + xoffset, y + outlineimage->yoffset, outlineimage->Image, clip_rect);
 
-	Gray2ImagePreMultipliedAlpha(target, image->Image, color, dx, dy, &rect);
+	Gray2ImagePreMultipliedAlpha(target, outlineimage->Image, color, dx, dy, &rect);
 	return cellincx;
 }
 
@@ -959,10 +966,12 @@ short BufferedOutlineFont::DrawOutlineFirstCharAlpha(I_GrayImage& target, int x,
 
 	int xoffset = image->xoffset;
 	int cellincx = image->CellIncX;
-	if (xoffset < 0)
+	const FontImage* fontimage = GetFontImage(c);
+	int font_xoffset = fontimage->xoffset;
+	if (font_xoffset < 0)
 	{
-		cellincx += -xoffset;
-		xoffset = 0;
+		cellincx += -font_xoffset;
+		xoffset += -font_xoffset;;
 	}
 
 	Rect rect;

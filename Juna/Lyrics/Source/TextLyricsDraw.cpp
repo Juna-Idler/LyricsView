@@ -59,12 +59,12 @@ void DrawAlignedLine(Juna::Picture::I_Image &target,const Juna::Picture::Rect &t
 			if (word.length == 0)
 				continue;
 			font.DrawOutlineFirstCharPreMultipliedAlpha(target,xoffset, base_y, string[word.offset], outc,&clip_rect);
-			int width = font.DrawFirstCharColor(target,xoffset, base_y,  string[word.offset], c,&clip_rect);
+			int width = font.DrawFirstCharPreMultipliedAlpha(target,xoffset, base_y,  string[word.offset], c,&clip_rect);
 			xoffset += width + param.CharSpace;
 			for (int j = 1; j < word.length; j++)
 			{
 				font.DrawOutlineCharPreMultipliedAlpha(target,xoffset, base_y, string[word.offset + j], outc,&clip_rect);
-				int width = font.DrawCharColor(target,xoffset, base_y,  string[word.offset + j], c,&clip_rect);
+				int width = font.DrawCharPreMultipliedAlpha(target,xoffset, base_y,  string[word.offset + j], c,&clip_rect);
 				xoffset += width + param.CharSpace;
 			}
 		}
@@ -196,7 +196,7 @@ RubySeachEnd:;
 			for (size_t i = 0; i < it->phonetic_length; i++)
 			{
 				rfont.DrawOutlineCharPreMultipliedAlpha(target,x, y, line.string.GetPhonetic()[it->phonetic_offset + i], outc,&clip_rect);
-				x += rfont.DrawCharColor(target,x,y,line.string.GetPhonetic()[it->phonetic_offset + i],c,&clip_rect) + space;
+				x += rfont.DrawCharPreMultipliedAlpha(target,x,y,line.string.GetPhonetic()[it->phonetic_offset + i],c,&clip_rect) + space;
 			}
 		}
 		else
