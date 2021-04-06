@@ -1,0 +1,26 @@
+LIBRARY	JunaLyricsMessageListener
+;リンカ　入力　モジュール定義ファイル
+DESCRIPTION "Juna for Time Taged Lyrics Viewing Message"
+
+EXPORTS
+
+	JLM_Initialize
+	JLM_Terminalize
+	JLM_ChangeWindowHandle
+
+	JLM_GetMessageValue
+
+	JLM_TestMessage
+	JLM_GetMessagePBEvent
+	JLM_GetMessageTime
+
+
+	JLM_GetLength
+	JLM_GetData
+	JLM_GetPath
+	JLM_GetTitle
+	JLM_GetArtist
+	JLM_GetAlbum
+	JLM_GetGenre
+	JLM_GetDate
+	JLM_GetComment

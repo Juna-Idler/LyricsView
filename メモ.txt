@@ -1,0 +1,18 @@
+﻿ruby_string
+{
+string base_string
+string phonetic_string
+
+ruby
+{
+int base_offset
+int base_length
+
+int phonetic_offset
+int phonetic_length
+}
+
+vector<ruby> rubys
+
+
+}

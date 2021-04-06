@@ -1,0 +1,66 @@
+LIBRARY	RKLyricsView
+;リンカ　入力　モジュール定義ファイル
+DESCRIPTION "ルビ付き (Karaoke) Lyrics View DLL"
+
+EXPORTS
+
+	LyricsView_Terminalize
+	LyricsView_IsValid
+	LyricsView_GetLyricsMode
+
+	LyricsView_SetLyrics
+	LyricsView_SetKaraoke
+	LyricsView_SetText
+	LyricsView_SetRubyKaraoke
+
+	LyricsView_SetFont
+
+	LyricsView_Resize
+
+	LyricsView_Update
+	LyricsView_GetCanvasDC
+	LyricsView_GetCanvasBitmap
+
+	LyricsView_UpdateCS
+	LyricsView_KaraokeUpdate
+
+	LyricsView_SetCurrentColor
+	LyricsView_SetOtherColor
+	LyricsView_SetStandbyColor
+	LyricsView_SetNTTTextColor
+
+
+	LyricsView_SetScrollTime
+
+	LyricsView_SetLineBackColor
+	LyricsView_SetLineBackPlusUp
+	LyricsView_SetLineBackPlusDown
+
+	LyricsView_SetVAlignment
+	LyricsView_SetHAlignment
+
+	LyricsView_SetSpace
+
+	LyricsView_SetRubyAlignment
+
+	LyricsView_SetMargin
+
+	LyricsView_SetLyricsLayout
+	LyricsView_SetBGImageLayout
+
+	LyricsView_SetBGColor
+	LyricsView_SetBGImage
+	LyricsView_SetBGImagePosition
+	LyricsView_SetBGImageFilter
+	LyricsView_SetBGImageLimitFlag
+	LyricsView_SetBGImageMaxSize
+
+
+	LyricsView_SetInfoTextFont
+	LyricsView_SetInfoTextColor
+	LyricsView_SetInfoTextAlignment
+	LyricsView_SetInfoTextLayout
+	LyricsView_SetInfoTextString
+
+	LyricsView_SetFrameImage
+

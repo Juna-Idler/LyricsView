@@ -1,0 +1,142 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{375BED3C-F79D-49D8-96A8-BB282ACEF820}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>RKLyricsView</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;RKLYRICSVIEW_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ModuleDefinitionFile>$(ProjectName).def</ModuleDefinitionFile>
+    </Link>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;RKLYRICSVIEW_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <ModuleDefinitionFile>$(ProjectName).def</ModuleDefinitionFile>
+    </Link>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\Juna\Lyrics\Source\KaraokeDraw.cpp" />
+    <ClCompile Include="..\Juna\Lyrics\Source\LyricsContainer.cpp" />
+    <ClCompile Include="..\Juna\Lyrics\Source\LyricsScrollDraw.cpp" />
+    <ClCompile Include="..\Juna\Lyrics\Source\LyricsViewer.cpp" />
+    <ClCompile Include="..\Juna\Lyrics\Source\RubyCommon.cpp" />
+    <ClCompile Include="..\Juna\Lyrics\Source\RubyKaraokeContainer.cpp" />
+    <ClCompile Include="..\Juna\Lyrics\Source\RubyKaraokeDraw.cpp" />
+    <ClCompile Include="..\Juna\Lyrics\Source\TextLyricsDraw.cpp" />
+    <ClCompile Include="..\Juna\Lyrics\Source\TimeTag.cpp" />
+    <ClCompile Include="..\Juna\Picture\DIBImage.cpp" />
+    <ClCompile Include="..\Juna\Picture\Source\Blit.cpp" />
+    <ClCompile Include="..\Juna\Picture\Source\ElasticBlit.cpp" />
+    <ClCompile Include="..\Juna\Picture\Source\Font.cpp" />
+    <ClCompile Include="..\Juna\Picture\Source\OutlineFont.cpp" />
+    <ClCompile Include="..\Juna\Picture\Source\PreMultipliedBlit.cpp" />
+    <ClCompile Include="..\Juna\Source\LineBreak.cpp" />
+    <ClCompile Include="..\Juna\Source\RubyString.cpp" />
+    <ClCompile Include="..\Juna\Source\StringLines.cpp" />
+    <ClCompile Include="..\Juna\Windows\Source\Utility.cpp" />
+    <ClCompile Include="DLLmain.cpp" />
+    <ClCompile Include="LyricsView.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="RKLyricsView.def" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Juna\2d_coordinate.h" />
+    <ClInclude Include="..\Juna\LineBreak.h" />
+    <ClInclude Include="..\Juna\Lyrics\KaraokeDraw.h" />
+    <ClInclude Include="..\Juna\Lyrics\LyricsContainer.h" />
+    <ClInclude Include="..\Juna\Lyrics\LyricsDrawParameter.h" />
+    <ClInclude Include="..\Juna\Lyrics\LyricsScrollDraw.h" />
+    <ClInclude Include="..\Juna\Lyrics\LyricsViewer.h" />
+    <ClInclude Include="..\Juna\Lyrics\RubyCommon.h" />
+    <ClInclude Include="..\Juna\Lyrics\RubyKaraokeContainer.h" />
+    <ClInclude Include="..\Juna\Lyrics\RubyKaraokeDraw.h" />
+    <ClInclude Include="..\Juna\Lyrics\TextLyricsDraw.h" />
+    <ClInclude Include="..\Juna\Lyrics\TimeTag.h" />
+    <ClInclude Include="..\Juna\Picture\Blit.h" />
+    <ClInclude Include="..\Juna\Picture\DIBImage.h" />
+    <ClInclude Include="..\Juna\Picture\ElasticBlit.h" />
+    <ClInclude Include="..\Juna\Picture\Font.h" />
+    <ClInclude Include="..\Juna\Picture\image.h" />
+    <ClInclude Include="..\Juna\RubyString.h" />
+    <ClInclude Include="..\Juna\StringLines.h" />
+    <ClInclude Include="..\Juna\Windows\Utility.h" />
+    <ClInclude Include="..\Juna\Windows\WindowClass.hpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

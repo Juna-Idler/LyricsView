@@ -1,0 +1,183 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="ソース ファイル">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="ヘッダー ファイル">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="リソース ファイル">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Juna">
+      <UniqueIdentifier>{7732448c-93c4-4b13-a281-d4dd3d572c8f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Juna\Picture">
+      <UniqueIdentifier>{07d06892-3a45-4f32-9ada-86d920667f72}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Juna\Lyrics">
+      <UniqueIdentifier>{f3b158cf-39a5-406e-b292-113a64ae1a3c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Juna\Windows">
+      <UniqueIdentifier>{2ef3a101-b2b7-4bc0-8e78-b52a4bc78922}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="TextFile.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="JunaLyricsMessage.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Juna\Source\LineBreak.cpp">
+      <Filter>Juna</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Juna\Source\RubyString.cpp">
+      <Filter>Juna</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Juna\Picture\Source\Blit.cpp">
+      <Filter>Juna\Picture</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Juna\Picture\DIBImage.cpp">
+      <Filter>Juna\Picture</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Juna\Picture\Source\ExpandedFont.cpp">
+      <Filter>Juna\Picture</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Juna\Picture\Source\Font.cpp">
+      <Filter>Juna\Picture</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Juna\Lyrics\Source\LyricsViewer.cpp">
+      <Filter>Juna\Lyrics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Juna\Picture\Source\ScreenImage.cpp">
+      <Filter>Juna\Picture</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Juna\Windows\Source\Utility.cpp">
+      <Filter>Juna\Windows</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Juna\Lyrics\Source\TimeTag.cpp">
+      <Filter>Juna\Lyrics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Juna\Lyrics\Source\RubyCommon.cpp">
+      <Filter>Juna\Lyrics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Juna\Lyrics\Source\KaraokeDraw.cpp">
+      <Filter>Juna\Lyrics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Juna\Lyrics\Source\LyricsContainer.cpp">
+      <Filter>Juna\Lyrics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Juna\Lyrics\Source\LyricsScrollDraw.cpp">
+      <Filter>Juna\Lyrics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Juna\Lyrics\Source\RubyKaraokeContainer.cpp">
+      <Filter>Juna\Lyrics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Juna\Lyrics\Source\TextLyricsDraw.cpp">
+      <Filter>Juna\Lyrics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Juna\Source\StringLines.cpp">
+      <Filter>Juna</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Juna\Picture\Source\PreMultipliedBlit.cpp">
+      <Filter>Juna\Picture</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Juna\Picture\Source\ElasticBlit.cpp">
+      <Filter>Juna\Picture</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Juna\Picture\Source\OutlineFont.cpp">
+      <Filter>Juna</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Juna\Lyrics\Source\RubyKaraokeDraw.cpp">
+      <Filter>Juna\Lyrics</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="TextFile.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="JunaLyricsMessage.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Juna\2d_coordinate.h">
+      <Filter>Juna</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Juna\LineBreak.h">
+      <Filter>Juna</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Juna\RubyString.h">
+      <Filter>Juna</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Juna\Picture\Blit.h">
+      <Filter>Juna\Picture</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Juna\Picture\DIBImage.h">
+      <Filter>Juna\Picture</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Juna\Picture\ExpandedFont.h">
+      <Filter>Juna\Picture</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Juna\Picture\Font.h">
+      <Filter>Juna\Picture</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Juna\Picture\image.h">
+      <Filter>Juna\Picture</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Juna\Lyrics\LyricsViewer.h">
+      <Filter>Juna\Lyrics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Juna\Picture\ScreenImage.h">
+      <Filter>Juna\Picture</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Juna\Windows\Thread.hpp">
+      <Filter>Juna\Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Juna\Windows\Utility.h">
+      <Filter>Juna\Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Juna\Windows\WindowClass.hpp">
+      <Filter>Juna\Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Juna\Lyrics\TimeTag.h">
+      <Filter>Juna\Lyrics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Juna\Lyrics\RubyCommon.h">
+      <Filter>Juna\Lyrics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Juna\Lyrics\KaraokeDraw.h">
+      <Filter>Juna\Lyrics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Juna\Lyrics\LyricsContainer.h">
+      <Filter>Juna\Lyrics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Juna\Lyrics\LyricsDrawParameter.h">
+      <Filter>Juna\Lyrics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Juna\Lyrics\LyricsScrollDraw.h">
+      <Filter>Juna\Lyrics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Juna\Lyrics\RubyKaraokeContainer.h">
+      <Filter>Juna\Lyrics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Juna\Lyrics\TextLyricsDraw.h">
+      <Filter>Juna\Lyrics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Juna\StringLines.h">
+      <Filter>Juna</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Juna\Picture\ElasticBlit.h">
+      <Filter>Juna\Picture</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Juna\Lyrics\RubyKaraokeDraw.h">
+      <Filter>Juna\Lyrics</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
